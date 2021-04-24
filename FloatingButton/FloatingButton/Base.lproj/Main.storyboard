@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FloatingButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WeatherBG_Sun" translatesAutoresizingMaskIntoConstraints="NO" id="JgI-2T-oTv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80s-ya-ofg">
+                                <rect key="frame" x="314" y="762" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="OZR-vK-aSN"/>
+                                    <constraint firstAttribute="height" constant="60" id="YcS-7q-dwe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="add_icon_green" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Qot-ga-zBw" kind="show" identifier="showPopup" animates="NO" id="Jiv-m1-Wsc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JgI-2T-oTv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6tx-gu-aOD"/>
+                            <constraint firstAttribute="bottom" secondItem="JgI-2T-oTv" secondAttribute="bottom" id="MbV-tr-1q3"/>
+                            <constraint firstItem="JgI-2T-oTv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" placeholder="YES" id="WET-wq-DNJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="80s-ya-ofg" secondAttribute="trailing" constant="40" id="dtH-og-iVI"/>
+                            <constraint firstAttribute="trailing" secondItem="JgI-2T-oTv" secondAttribute="trailing" id="eMB-Ma-vhm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="80s-ya-ofg" secondAttribute="bottom" constant="40" id="j1F-Yb-76P"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="118.52678571428571"/>
+        </scene>
+        <!--Floating Button List View Controller-->
+        <scene sceneID="Iyv-hQ-6s0">
+            <objects>
+                <viewController id="Qot-ga-zBw" customClass="FloatingButtonListViewController" customModule="FloatingButton" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cvp-Rh-raY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Be-wo-rtq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Vpc-6g-C3w">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWS-i1-7BL">
+                                <rect key="frame" x="324" y="478" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="HkK-8V-LHW"/>
+                                    <constraint firstAttribute="width" constant="40" id="cCc-sL-zeo"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="map"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAe-2p-buN">
+                                <rect key="frame" x="324" y="558" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="WSM-vn-XY0"/>
+                                    <constraint firstAttribute="width" constant="40" id="yUw-OS-IHe"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="comments"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcZ-Dq-ArS">
+                                <rect key="frame" x="324" y="638" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fRi-mZ-Nx5"/>
+                                    <constraint firstAttribute="width" constant="40" id="nxJ-lA-mhk"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="clouds"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwU-PI-hNt">
+                                <rect key="frame" x="314" y="708" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="L6r-5e-3I0"/>
+                                    <constraint firstAttribute="height" constant="60" id="Zpr-U5-V5V"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="add_icon_green"/>
+                                <connections>
+                                    <action selector="dismissFloating:" destination="Qot-ga-zBw" eventType="touchUpInside" id="Cyd-AZ-Mgs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uIQ-iJ-wkb"/>
+                        <constraints>
+                            <constraint firstItem="rwU-PI-hNt" firstAttribute="centerY" secondItem="gcZ-Dq-ArS" secondAttribute="centerY" constant="80" id="5jj-md-O5b"/>
+                            <constraint firstItem="rwU-PI-hNt" firstAttribute="centerY" secondItem="OWS-i1-7BL" secondAttribute="centerY" constant="240" id="5qD-ql-nzE"/>
+                            <constraint firstItem="rwU-PI-hNt" firstAttribute="centerY" secondItem="hAe-2p-buN" secondAttribute="centerY" constant="160" id="7d2-br-yA4"/>
+                            <constraint firstItem="rwU-PI-hNt" firstAttribute="centerX" secondItem="hAe-2p-buN" secondAttribute="centerX" id="CJE-jd-MsR"/>
+                            <constraint firstAttribute="bottom" secondItem="3Be-wo-rtq" secondAttribute="bottom" id="DTW-Iu-uTp"/>
+                            <constraint firstItem="uIQ-iJ-wkb" firstAttribute="trailing" secondItem="rwU-PI-hNt" secondAttribute="trailing" constant="40" id="I8l-Xb-BU1"/>
+                            <constraint firstItem="3Be-wo-rtq" firstAttribute="trailing" secondItem="uIQ-iJ-wkb" secondAttribute="trailing" id="KQG-KD-AP2"/>
+                            <constraint firstItem="rwU-PI-hNt" firstAttribute="centerX" secondItem="gcZ-Dq-ArS" secondAttribute="centerX" id="Rvg-c5-wC7"/>
+                            <constraint firstItem="3Be-wo-rtq" firstAttribute="leading" secondItem="uIQ-iJ-wkb" secondAttribute="leading" id="YIX-D2-4PU"/>
+                            <constraint firstItem="rwU-PI-hNt" firstAttribute="centerX" secondItem="OWS-i1-7BL" secondAttribute="centerX" id="Ygm-jp-u1R"/>
+                            <constraint firstItem="uIQ-iJ-wkb" firstAttribute="bottom" secondItem="rwU-PI-hNt" secondAttribute="bottom" constant="40" id="b5b-iF-RXK"/>
+                            <constraint firstItem="3Be-wo-rtq" firstAttribute="top" secondItem="cvp-Rh-raY" secondAttribute="top" id="l8N-h9-EwF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qJo-v0-gyL"/>
+                    <connections>
+                        <outlet property="btn1CenterY" destination="5jj-md-O5b" id="FxX-ta-t02"/>
+                        <outlet property="btn2CenterY" destination="7d2-br-yA4" id="FB0-bo-GZE"/>
+                        <outlet property="btn3CenterY" destination="5qD-ql-nzE" id="Igl-YL-zaz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9so-gF-jaG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940.57971014492762" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="WeatherBG_Sun" width="750" height="1334"/>
+        <image name="add_icon_green" width="482" height="481"/>
+        <image name="add_icon_green" width="482" height="481"/>
+        <image name="clouds" width="128" height="128"/>
+        <image name="comments" width="128" height="128"/>
+        <image name="map" width="128" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

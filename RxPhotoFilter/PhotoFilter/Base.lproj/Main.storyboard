@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qqc-DJ-RiZ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Filter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PhotoFilter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gtm-G8-6aU">
+                                <rect key="frame" x="0.0" y="206" width="414" height="530"/>
+                            </imageView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VCy-pw-OGj">
+                                <rect key="frame" x="160" y="778" width="94" height="30"/>
+                                <state key="normal" title="Apply Filter"/>
+                                <connections>
+                                    <action selector="applyFilterButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="xKD-9Z-QHF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VCy-pw-OGj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="160" id="1l1-XD-Qi7"/>
+                            <constraint firstItem="gtm-G8-6aU" firstAttribute="centerX" secondItem="VCy-pw-OGj" secondAttribute="centerX" id="1sJ-6V-hOE"/>
+                            <constraint firstItem="gtm-G8-6aU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="118" id="FTa-5H-PEp"/>
+                            <constraint firstItem="VCy-pw-OGj" firstAttribute="top" secondItem="gtm-G8-6aU" secondAttribute="bottom" constant="42" id="OFO-PJ-goT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VCy-pw-OGj" secondAttribute="bottom" constant="54" id="eca-98-rtE"/>
+                            <constraint firstItem="gtm-G8-6aU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jE8-Rp-7JH"/>
+                            <constraint firstItem="gtm-G8-6aU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qkW-Vn-uAH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo Filter" id="PaV-3R-d1t">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Yp3-1d-oVt">
+                            <connections>
+                                <segue destination="Z8V-WX-Cvr" kind="presentation" id="YXm-Yi-Cdc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="applyFilterButton" destination="VCy-pw-OGj" id="qLY-TQ-zoo"/>
+                        <outlet property="photoImageView" destination="gtm-G8-6aU" id="4Zg-FY-bGt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="88.392857142857139"/>
+        </scene>
+        <!--Photos Collection View Controller-->
+        <scene sceneID="nfy-pp-wS3">
+            <objects>
+                <collectionViewController id="C6F-yt-WKc" customClass="PhotosCollectionViewController" customModule="PhotoFilter" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Zd8-PG-HSO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5KF-jE-jAj">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCollectionViewCell" id="SO1-YB-ova" customClass="PhotoCollectionViewCell" customModule="PhotoFilter" customModuleProvider="target">
+                                <rect key="frame" x="10" y="10" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kST-MR-SaP">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2J9-0o-ubq">
+                                            <rect key="frame" x="0.0" y="0.0" width="148" height="128"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2J9-0o-ubq" firstAttribute="top" secondItem="kST-MR-SaP" secondAttribute="top" id="7OO-bS-Dto"/>
+                                        <constraint firstItem="2J9-0o-ubq" firstAttribute="width" secondItem="kST-MR-SaP" secondAttribute="width" multiplier="1.15625" id="7TL-SF-i9a"/>
+                                        <constraint firstItem="2J9-0o-ubq" firstAttribute="leading" secondItem="kST-MR-SaP" secondAttribute="leading" id="Ydy-hK-CWc"/>
+                                        <constraint firstItem="2J9-0o-ubq" firstAttribute="height" secondItem="kST-MR-SaP" secondAttribute="height" id="umU-aP-tME"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="photoImageView" destination="2J9-0o-ubq" id="Gg8-8b-4Ot"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="C6F-yt-WKc" id="Pq4-if-9zy"/>
+                            <outlet property="delegate" destination="C6F-yt-WKc" id="5BV-mk-WmD"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="hT3-gm-7jQ"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="91K-P4-c9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2765.217391304348" y="88.392857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k66-Wq-aBW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qqc-DJ-RiZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yW8-3d-sOU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mps-RL-86P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="baT-ok-Nfn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mZh-jd-UJX">
+            <objects>
+                <navigationController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="Z8V-WX-Cvr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rqZ-2M-YWE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C6F-yt-WKc" kind="relationship" relationship="rootViewController" id="Yz8-MK-oHT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhH-6p-Isz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.6231884057972" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
