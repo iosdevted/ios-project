@@ -1,6 +1,6 @@
 # 👨‍💻 iOS Projects
 
-Professionally taught iOS Engineer with 1-year experience. I have done multiple iOS applications ranging from social apps to simple views. I have been very enthusiastic and passionate about my field and exploring more and more knowledge in it.
+Professionally taught iOS Engineer. I have done multiple iOS applications ranging from social apps to simple views. I have been very enthusiastic and passionate about my field and exploring more and more knowledge in it.
 
 ## **Table of contents**
 
@@ -110,7 +110,6 @@ This project is a clone of Uber which is a transportation network application us
 - Fully Programmatic Approach
 - Clean, scalable and maintainable code.
 
-
 ### [Real Time Chat](https://github.com/iosdevted/real-time-chat)
 
 <p>
@@ -131,8 +130,7 @@ This project is a real-time-based chat application built using MVVM design patte
 - Fully Programmatic Approach
 - Clean, scalable and maintainable code.
 
-
-### [Twitter Clone (Uncompleted)](https://github.com/iosdevted/twitter-clone) 
+### [Twitter Clone (Uncompleted)](https://github.com/iosdevted/twitter-clone)
 
 <img src="https://user-images.githubusercontent.com/50784573/104917842-4bd4a580-59d7-11eb-9124-c4167e4a410a.gif" Height=350/>
 
@@ -146,7 +144,6 @@ This is a simple ios application built using MVVM design pattern and Firebase fo
 - Build a custom slide up menu with custom actions
 - Fully Programmatic Approach
 - Clean, scalable and maintainable code.
-
 
 ### [iOS Login Kit](https://github.com/iosdevted/ios-loginkit)
 
